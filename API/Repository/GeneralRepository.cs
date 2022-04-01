@@ -26,6 +26,13 @@ namespace API.Repository
             return result;
         }
 
+        public int DeleteByKey(Key key)
+        {
+            var data = entities.Find(key);
+            myContext.Remove(data);
+            return myContext.SaveChanges();
+        }
+
         //Methode implements
         public IEnumerable<Entity> Get()
         {

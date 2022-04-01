@@ -73,6 +73,13 @@ namespace API.Base
             return Ok(result);
         }
 
-        
+        [HttpDelete("{Key}")]
+        public ActionResult<Entity> DeleteByKey(Key key)
+        {
+            var result = repository.DeleteByKey(key);
+            return Ok(result);
+        }
+
+
     }
 }

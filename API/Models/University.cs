@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.Models
@@ -10,6 +11,8 @@ namespace API.Models
 
         [Required]
         public string Name { get; set; }
-        public ICollection<Education> Education { get; set; }
+
+        [JsonIgnore]
+        public virtual ICollection<Education> Education { get; set; }
     }
 }

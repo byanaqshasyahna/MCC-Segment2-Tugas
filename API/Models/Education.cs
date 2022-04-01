@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace API.Models
@@ -13,7 +14,11 @@ namespace API.Models
         public string GPA { get; set; }
         [Required]
         public int UniversityId { get; set; }
-        public ICollection<Profiling> Profiling { get; set; }
-        public University University { get; set; }
+
+        [JsonIgnore]
+        public virtual ICollection<Profiling> Profiling { get; set; }
+
+        [JsonIgnore]
+        public virtual University University { get; set; }
     }
 }

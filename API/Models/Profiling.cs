@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace API.Models
 {
@@ -11,8 +12,10 @@ namespace API.Models
         [Required]
         public int EducationId { get; set; }
 
-        public Account Account { get; set; }
-        public Education Education { get; set; }
+        [JsonIgnore]
+        public virtual Account Account { get; set; }
+        [JsonIgnore]
+        public virtual Education Education { get; set; }
 
     }
 }

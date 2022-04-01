@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\byana\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\byana\\.nuget\\packages"
+    ]
+  }
+}
